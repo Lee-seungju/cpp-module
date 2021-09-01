@@ -6,11 +6,11 @@
 #    By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/28 07:55:44 by slee2             #+#    #+#              #
-#    Updated: 2021/09/01 14:27:05 by slee2            ###   ########.fr        #
+#    Updated: 2021/09/01 14:31:37 by slee2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = abc
+NAME = account
 CC = clang++
 CFLAGS = -Wall -Wextra -Werror
 SRCS = tests.cpp Account.cpp
