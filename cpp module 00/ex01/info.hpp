@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 08:24:44 by slee2             #+#    #+#             */
-/*   Updated: 2021/08/30 11:43:04 by slee2            ###   ########.fr       */
+/*   Updated: 2021/09/01 18:48:44 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ class data
 		void	show_info();
 		void	search_info();
 		void	get_info();
+		static int	count;
 };
+
+int	data::count = 0;
 
 void	data::show_info()
 {
@@ -40,7 +43,7 @@ void	data::show_info()
 
 	i = 0;
 	std::cout << "  index   |first name|last name | nickname " << std::endl;
-	while (i < index)
+	while (i < count)
 	{
 		std::cout << i << "         " << "|";
 		if (fn[i].length() > 10)
@@ -64,7 +67,7 @@ void	data::show_info()
 			std::cout << "|";
 		}
 		if (nick[i].length() > 10)
-			std::cout << nick[i].substr(0, 9) << "." << "|";
+			std::cout << nick[i].substr(0, 9) << ".";
 		else
 		{
 			std::cout << nick[i];
@@ -106,6 +109,8 @@ void	data::get_info()
 	std::getline(std::cin, phone[index]);
 	std::cout << "darkest secret : ";
 	std::getline(std::cin, secret[index]);
+	if (count < 8)
+		count++;
 }
 
 #endif
