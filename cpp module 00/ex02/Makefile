@@ -6,14 +6,14 @@
 #    By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/28 07:55:44 by slee2             #+#    #+#              #
-#    Updated: 2021/08/29 08:42:21 by slee2            ###   ########.fr        #
+#    Updated: 2021/09/01 10:53:34 by slee2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = abc
 CC = clang++
 CFLAGS = -Wall -Wextra -Werror
-SRCS = tests.cpp
+SRCS = tests.cpp Account.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all : $(NAME)
