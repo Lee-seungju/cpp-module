@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 08:24:44 by slee2             #+#    #+#             */
-/*   Updated: 2021/09/01 18:48:44 by slee2            ###   ########.fr       */
+/*   Updated: 2021/09/01 19:48:14 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define INFO_HPP
 
 # include <iostream>
-// # include <iomanip>
 # include <string>
 
 class data
