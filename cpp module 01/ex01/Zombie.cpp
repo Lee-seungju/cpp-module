@@ -14,15 +14,31 @@
 
 void    Zombie::announce(void)
 {
-    std::cout << "<" + Zombie::name + "> Braiiii BraiiiiiiinnnzzzZ..." << std::endl;
+    int i;
+    
+    i = 0;
+    while (i < Zombie::num)
+        std::cout << "<" + Zombie::name[i++] + "> Braiiii BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-Zombie::Zombie( std::string g_name )
+Zombie::Zombie(int num, std::string z_name)
 {
-    Zombie::name = g_name;
+    int i;
+    std::stringstream   ssInt;
+
+    i = 0;
+    Zombie::name = new std::string[num];
+    Zombie::num = num;
+    while (i < num)
+    {
+        ssInt.str(std::string());
+        ssInt << i;
+        Zombie::name[i] = z_name + ssInt.str();
+        i++;
+    }
 }
 
 Zombie::~Zombie(void)
 {
-    std::cout << Zombie::name + " is dead" << std::endl;
+    std::cout << "ZombieHorde is dead" << std::endl;
 }

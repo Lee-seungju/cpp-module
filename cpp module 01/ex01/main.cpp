@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/29 00:21:28 by slee2             #+#    #+#             */
-/*   Updated: 2021/09/01 18:43:02 by slee2            ###   ########.fr       */
+/*   Created: 2021/08/28 07:48:33 by slee2             #+#    #+#             */
+/*   Updated: 2021/08/28 07:59:58 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void    Zombie::announce(void)
+int main(void)
 {
-    std::cout << "<" + Zombie::name + "> Braiiii BraiiiiiiinnnzzzZ..." << std::endl;
-}
+    Zombie  *zombie;
 
-Zombie::Zombie( std::string g_name )
-{
-    Zombie::name = g_name;
-}
-
-Zombie::~Zombie(void)
-{
-    std::cout << Zombie::name + " is dead" << std::endl;
+	zombie = zombieHorde(3, "zombie");
+    zombie->announce();
+    delete zombie;
+    return (0);
 }

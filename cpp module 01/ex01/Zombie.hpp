@@ -10,19 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-void    Zombie::announce(void)
-{
-    std::cout << "<" + Zombie::name + "> Braiiii BraiiiiiiinnnzzzZ..." << std::endl;
-}
+#include <iostream>
+#include <string>
+#include <sstream>
 
-Zombie::Zombie( std::string g_name )
+class Zombie
 {
-    Zombie::name = g_name;
-}
+    private:
+        int         num;
+        std::string *name;
+    public:
+        void    announce(void);
 
-Zombie::~Zombie(void)
-{
-    std::cout << Zombie::name + " is dead" << std::endl;
-}
+        Zombie(int num, std::string z_name);
+        ~Zombie(void);
+};
+
+Zombie* zombieHorde( int N, std::string name );
+
+#endif

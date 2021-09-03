@@ -6,14 +6,14 @@
 #    By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/28 07:55:44 by slee2             #+#    #+#              #
-#    Updated: 2021/09/03 13:11:49 by slee2            ###   ########.fr        #
+#    Updated: 2021/09/03 13:38:05 by slee2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = zombie
 CC = clang++
 CFLAGS = -Wall -Wextra -Werror
-SRCS = newZombie.cpp Zombie.cpp randomChump.cpp main.cpp
+SRCS = ZombieHorde.cpp Zombie.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all : $(NAME)

@@ -15,17 +15,19 @@
 
 #include <iostream>
 #include <string>
-#include <vector>
 
 class Zombie
 {
     private:
         std::string name;
     public:
-        void    announce();
-        
+        void    announce(void);
+
         Zombie( std::string g_name );
         ~Zombie(void);
 };
+
+Zombie  *newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif
