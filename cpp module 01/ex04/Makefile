@@ -6,11 +6,11 @@
 #    By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/28 07:55:44 by slee2             #+#    #+#              #
-#    Updated: 2021/09/06 16:54:20 by slee2            ###   ########.fr        #
+#    Updated: 2021/09/06 19:08:10 by slee2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = weapon
+NAME = replace
 CC = clang++
 CFLAGS = -Wall -Wextra -Werror
 SRCS = main.cpp
