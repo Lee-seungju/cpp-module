@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 14:34:14 by slee2             #+#    #+#             */
-/*   Updated: 2021/09/07 07:57:23 by slee2            ###   ########.fr       */
+/*   Updated: 2021/09/07 08:18:20 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ int	main(int argc, char **argv)
 	else
 	{
 		std::ifstream	openFile(argv[1]);
-		std::ofstream	writeFile((std::string)argv[1] + (std::string)".replace");
 		if(openFile.is_open())
 		{
+			std::ofstream	writeFile((std::string)argv[1] + (std::string)".replace");
 			std::string	line;
 			while (std::getline(openFile, line))
 			{
