@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 14:34:14 by slee2             #+#    #+#             */
-/*   Updated: 2021/09/06 18:07:02 by slee2            ###   ########.fr       */
+/*   Updated: 2021/09/07 07:57:23 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	main(int argc, char **argv)
 					while (argv[2][j])
 						j++;
 					line = line.substr(0, n) + line.substr(n + j);
-					line = line.substr(0, n) + s3 + line.substr(n );
+					line = line.substr(0, n) + s3 + line.substr(n);
 					i += (n + s3.length());
 				}
 				writeFile << line + "\n";
