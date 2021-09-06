@@ -6,14 +6,14 @@
 #    By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/28 07:55:44 by slee2             #+#    #+#              #
-#    Updated: 2021/09/06 14:33:33 by slee2            ###   ########.fr        #
+#    Updated: 2021/09/06 16:54:20 by slee2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = weapon
 CC = clang++
 CFLAGS = -Wall -Wextra -Werror
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all : $(NAME)
