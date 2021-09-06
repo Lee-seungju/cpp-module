@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 19:16:42 by slee2             #+#    #+#             */
-/*   Updated: 2021/09/06 20:41:22 by slee2            ###   ########.fr       */
+/*   Updated: 2021/09/06 20:52:05 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,20 +34,30 @@ void	Karen::error(void)
 
 void	Karen::complain(std::string level)
 {
-	check_t	p_level[4] = {
-		{"DEBUG", &Karen::debug},
-		{"INFO", &Karen::info},
-		{"WARNING", &Karen::warning},
-		{"ERROR", &Karen::error}
-	};
 	std::string	whatlevel[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	int	i = std::find(whatlevel, whatlevel + 4, level) - whatlevel;
 	
 	switch(i)
 	{
-		case 4:
+		case 0:
+			std::cout << "[ DEBUG ]" << std::endl;
+			Karen::debug();
+			std::cout << std::endl;
+		case 1:
+			std::cout << "[ INFO ]" << std::endl;
+			Karen::info();
+			std::cout << std::endl;
+		case 2:
+			std::cout << "[ WARNING ]" << std::endl;
+			Karen::warning();
+			std::cout << std::endl;
+		case 3:
+			std::cout << "[ ERROR ]" << std::endl;
+			Karen::error();
+			std::cout << std::endl;
+			break;
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 			return ;
 	}
-	void	(Karen::*ptr)(void) = p_level[i].d;
-	(this->*ptr)();
 }
