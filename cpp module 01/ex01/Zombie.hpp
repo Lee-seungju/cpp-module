@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 00:21:28 by slee2             #+#    #+#             */
-/*   Updated: 2021/09/01 18:43:02 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/06 14:18:51 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,11 @@
 class Zombie
 {
     private:
-        int         num;
-        std::string *name;
+        std::string name;
     public:
         void    announce(void);
+		void	setName(std::string z_name);
 
-        Zombie(int num, std::string z_name);
         ~Zombie(void);
 };
 
