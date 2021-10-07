@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 00:21:28 by slee2             #+#    #+#             */
-/*   Updated: 2021/09/01 18:43:02 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/07 09:46:17 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Fixed::~Fixed() {
 }
 
 void    Fixed::setRawBits( int const raw ) {
-    this->fix_value = raw << this->frac_bit;
+    this->fix_value = raw;
 }
 
 Fixed&  Fixed::operator=(const Fixed& fix) {
