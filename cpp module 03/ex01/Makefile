@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: slee2 <slee2@student.42.fr>                +#+  +:+       +#+         #
+#    By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/28 07:55:44 by slee2             #+#    #+#              #
-#    Updated: 2021/10/09 11:42:24 by slee2            ###   ########.fr        #
+#    Updated: 2021/10/09 06:08:30 by slee2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
 CC = clang++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = Fixed.cpp main.cpp
+CFLAGS = -Wall -Wextra -Werror
+SRCS = ClapTrap.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all : $(NAME)

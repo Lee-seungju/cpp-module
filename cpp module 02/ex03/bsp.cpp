@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 03:48:52 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/09 04:54:08 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/09 14:02:32 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,9 @@ int	check_in(Point const l1, Point const l2, Point const p, bool *flag) {
 	a = (l1.get_y() - l2.get_y()) / (l1.get_x() - l2.get_x());
 	b = l1.get_y() - a * l1.get_x();
 	new_p_x = (p.get_y() - b) / a;
-	if (p.get_x() < new_p_x)
+	if (p.get_x() < new_p_x && \
+			p.get_y() > Fixed::min(l1.get_y(), l2.get_y()) && \
+			p.get_y() < Fixed::max(l1.get_y(), l2.get_y()))
 		return 1;
 	if (p.get_x() == new_p_x)
 		*flag = true;

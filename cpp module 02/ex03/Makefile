@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+         #
+#    By: slee2 <slee2@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/28 07:55:44 by slee2             #+#    #+#              #
-#    Updated: 2021/10/09 04:27:11 by slee2            ###   ########.fr        #
+#    Updated: 2021/10/09 11:42:30 by slee2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
 CC = clang++
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = Fixed.cpp main.cpp Point.cpp bsp.cpp
 OBJS = $(SRCS:.cpp=.o)
 

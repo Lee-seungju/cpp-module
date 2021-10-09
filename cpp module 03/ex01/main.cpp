@@ -5,33 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/06 13:00:50 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/09 14:04:50 by slee2            ###   ########.fr       */
+/*   Created: 2021/10/09 06:07:21 by slee2             #+#    #+#             */
+/*   Updated: 2021/10/09 06:30:22 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include "ClapTrap.hpp"
 
-int	main(void)
-{
-	{
-		Weapon	club = Weapon("crude spiked club");
+int	main(void) {
+	ClapTrap a("abc");
+	ClapTrap c;
+	std::string const b = "bbb";
 
-		HumanA	bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon	club = Weapon("crude spiked club");
-
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return 0;
+	a.attack(b);
+	a.takeDamage(100);
+	a.beRepaired(10);
+	a.takeDamage(5);
+	c.takeDamage(1);
+	c.beRepaired(10);
 }

@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/06 19:13:42 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/09 14:05:15 by slee2            ###   ########.fr       */
+/*   Created: 2021/10/09 05:45:17 by slee2             #+#    #+#             */
+/*   Updated: 2021/10/09 06:10:22 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Karen.hpp"
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
-int	main(int argc, char **argv)
-{
-	Karen	k;
+#include <iostream>
+#include <string>
 
-	(void)argc;
-	if (argc != 2)
-		return (0);
-	else
-		k.complain((std::string)argv[1]);
-	return (0);
-}
+class ClapTrap {
+	private:
+		std::string	Name;
+		int	Hitpoints;
+		int energy;
+		int damage;
+	public:
+		void	attack(std::string const & target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
+		ClapTrap(std::string name);
+		ClapTrap();
+		~ClapTrap();
+};
+
+#endif
