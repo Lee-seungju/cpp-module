@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 04:27:06 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 05:42:59 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/10 06:21:38 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ DiamondTrap::~DiamondTrap() {
 	std::cout << "DiamondTrap " << this->Name << " has been destroyed." << std::endl;
 }
 
-void	DiamondTrap::attack(std::string a) {
-	ScavTrap::attack(a);
+void	DiamondTrap::attack(std::string const & target) {
+	ScavTrap::attack(target);
 }
 
 DiamondTrap&	DiamondTrap::operator=( DiamondTrap const& Diamond) {
