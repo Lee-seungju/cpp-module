@@ -6,21 +6,27 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 06:07:21 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/09 06:30:22 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/10 04:07:53 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main(void) {
-	ClapTrap a("abc");
-	ClapTrap c;
 	std::string const b = "bbb";
+	ScavTrap d("slee2");
 
-	a.attack(b);
-	a.takeDamage(100);
-	a.beRepaired(10);
-	a.takeDamage(5);
-	c.takeDamage(1);
-	c.beRepaired(10);
+	d.attack(b);
+	d.takeDamage(20);
+	d.beRepaired(10);
+	std::cout << std::endl;
+	
+	ScavTrap e;
+	e = d;
+	e.attack(b);
+	e.takeDamage(1000);
+	e.guardGate();
+	e.beRepaired(100);
+	e.guardGate();
+	return 0;
 }

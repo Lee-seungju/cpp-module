@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 06:07:21 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 03:30:46 by slee2            ###   ########.fr       */
+/*   Created: 2021/10/10 02:28:44 by slee2             #+#    #+#             */
+/*   Updated: 2021/10/10 03:44:38 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+
 #include "ClapTrap.hpp"
 
-int	main(void) {
-	ClapTrap a("abc");
-	ClapTrap c;
-	std::string const b = "bbb";
-	ClapTrap d;
+class ScavTrap: public ClapTrap {
+	public:
+		ScavTrap();
+		ScavTrap( std::string _name);
+		~ScavTrap();
+		void	attack(std::string const & target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
+		void	guardGate();
 
-	a.attack(b);
-	a.takeDamage(100);
-	a.beRepaired(10);
-	a.takeDamage(5);
-	c.takeDamage(1);
-	c.beRepaired(10);
-	d = a;
-	d.takeDamage(1);
-}
+		ScavTrap& operator=( ScavTrap const& scav);
+};
+
+#endif

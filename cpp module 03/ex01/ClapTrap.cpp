@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 05:45:06 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/09 06:32:46 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/10 03:58:56 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap() {
 	this->Name = "default";
-	std::cout << "Name : " << this->Name << std::endl;
+	std::cout << "ClapTrap_Name : " << this->Name << std::endl;
 	this->Hitpoints = 10;
 	this->energy = 10;
 	this->damage = 0;
@@ -22,14 +22,14 @@ ClapTrap::ClapTrap() {
 
 ClapTrap::ClapTrap(std::string name) {
 	this->Name = name;
-	std::cout << "Name : " << this->Name << std::endl;
+	std::cout << "ClapTrap_Name : " << this->Name << std::endl;
 	this->Hitpoints = 10;
 	this->energy = 10;
 	this->damage = 0;
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << "ClapTrap delete" << std::endl;
+	std::cout << "ClapTrap " << this->Name << " has been destroyed." << std::endl;
 }
 
 void	ClapTrap::attack(std::string const & target) {
@@ -49,16 +49,24 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 			" take Damage " << amount << " , remaning hp is " \
 			<< this->energy << std::endl;
 	}
-	
 }
 
 void	ClapTrap::beRepaired(unsigned int amount) {
 	if (this->energy == 0) {
-		std::cout << this->Name << "is repaired by " << amount << " and comes back to life" << std::endl;
+		std::cout << "ClapTrap " << this->Name << " is repaired by " << amount << " and comes back to life" << std::endl;
 		this->energy += amount;
 	}
 	else {
 		this->energy += amount;
-		std::cout << this->Name << " is repaired by " << amount << " and remaning hp is " << this->energy << std::endl;
+		std::cout << "ClapTrap " << this->Name << " is repaired by " << amount << " and remaning hp is " << this->energy << std::endl;
 	}
+}
+
+ClapTrap&	ClapTrap::operator=( ClapTrap const& clap) {
+	this->Name = clap.Name;
+	this->Hitpoints = clap.Hitpoints;
+	this->energy = clap.energy;
+	this->damage = clap.damage;
+	std::cout << "ClapTrap "<< this->Name << "operator= is called" << std::endl;
+	return *this;
 }

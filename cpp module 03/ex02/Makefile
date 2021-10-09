@@ -6,14 +6,14 @@
 #    By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/28 07:55:44 by slee2             #+#    #+#              #
-#    Updated: 2021/10/10 02:47:19 by slee2            ###   ########.fr        #
+#    Updated: 2021/10/10 04:23:14 by slee2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
 CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror
-SRCS = ClapTrap.cpp main.cpp ScavTrap.cpp
+SRCS = ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all : $(NAME)
