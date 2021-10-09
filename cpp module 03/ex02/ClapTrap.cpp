@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 05:45:06 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 03:58:56 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/10 05:41:29 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,6 @@ ClapTrap&	ClapTrap::operator=( ClapTrap const& clap) {
 	this->Hitpoints = clap.Hitpoints;
 	this->energy = clap.energy;
 	this->damage = clap.damage;
-	std::cout << "ClapTrap "<< this->Name << "operator= is called" << std::endl;
+	std::cout << "ClapTrap "<< this->Name << " operator= is called" << std::endl;
 	return *this;
 }

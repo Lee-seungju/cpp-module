@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 06:07:21 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 05:37:49 by slee2            ###   ########.fr       */
+/*   Created: 2021/10/10 04:03:09 by slee2             #+#    #+#             */
+/*   Updated: 2021/10/10 04:56:05 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-int	main(void) {
-	std::string const b = "bbb";
-	ScavTrap d("slee2");
+#include "ClapTrap.hpp"
 
-	std::cout << std::endl;
-	
-	d.attack(b);
-	d.takeDamage(20);
-	d.beRepaired(10);
-	
-	std::cout << std::endl;
-	
-	ScavTrap e;
-	e = d;
-	e.attack(b);
-	e.takeDamage(1000);
-	e.guardGate();
-	e.beRepaired(100);
-	e.guardGate();
+class FragTrap : public virtual ClapTrap {
+	public:
+		FragTrap();
+		FragTrap( std::string name);
+		~FragTrap();
+		FragTrap&	operator=( FragTrap const& frag);
+		void	highFivesGuys(void);
+};
 
-	std::cout << std::endl;
-
-	return 0;
-}
+#endif

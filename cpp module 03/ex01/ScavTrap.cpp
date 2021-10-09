@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 02:28:36 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 04:08:11 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/10 05:40:04 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ ScavTrap::~ScavTrap() {
 
 ScavTrap& ScavTrap::operator=( ScavTrap const& scav) {
 	ClapTrap::operator=(scav);
-	std::cout << "ScavTrap " << this->Name << "operator= is called" << std::endl;
+	std::cout << "ScavTrap " << this->Name << " operator= is called" << std::endl;
 	return *this;
 }
 
 void	ScavTrap::attack(std::string const & target) {
-	std::cout << "ScavTrap_ " << this->Name << \
+	std::cout << "ScavTrap " << this->Name << \
 		" attacks " << target << " , causing " \
 		<< this->damage << " points of damage!" << std::endl;
 }
@@ -70,5 +70,5 @@ void	ScavTrap::guardGate() {
 	if (energy)
 		std::cout << "ScavTrap " << this->Name << " has entered gate guard mode." << std::endl;
 	else
-		std::cout << "ScavTrap " << this->Name << " cannot enter gate guard mode because " << this->Name << "is dead." << std::endl;
+		std::cout << "ScavTrap " << this->Name << " cannot enter gate guard mode because " << this->Name << " is dead." << std::endl;
 }
