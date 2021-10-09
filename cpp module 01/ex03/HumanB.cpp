@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 13:56:22 by slee2             #+#    #+#             */
-/*   Updated: 2021/09/06 14:07:18 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/10 06:28:45 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	HumanB::attack(void)
 {
-	if (HumanB::weapon == nullptr)
+	if (HumanB::weapon == 0)
 	{
 		std::cout << HumanB::name + " don't have any Weapon" << std::endl;
 		return ;
@@ -25,7 +25,7 @@ void	HumanB::attack(void)
 HumanB::HumanB(std::string _name)
 {
 	HumanB::name = _name;
-	HumanB::weapon = nullptr;
+	HumanB::weapon = 0;
 }
 
 void	HumanB::setWeapon(Weapon &w)
