@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/10 04:27:15 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 13:18:17 by slee2            ###   ########.fr       */
+/*   Created: 2021/10/09 06:07:21 by slee2             #+#    #+#             */
+/*   Updated: 2021/10/13 08:06:05 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DIAMONDTRAP_HPP
-# define DIAMONDTRAP_HPP
+#include "Animal.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
 
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
-
-class DiamondTrap: public FragTrap, public ScavTrap {
-	private:
-		std::string Name;
-	public:
-		DiamondTrap();
-		DiamondTrap( std::string n);
-		~DiamondTrap();
-		void	attack(std::string const & target);
-		DiamondTrap&	operator=( DiamondTrap const& Diamond);
-		void	whoAmI();
-};
-
-#endif
+int	main(void) {
+	const Animal* meta = new Animal();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound(); //will output the cat sound!
+	j->makeSound();
+	meta->makeSound();
+		
+	return 0;
+}

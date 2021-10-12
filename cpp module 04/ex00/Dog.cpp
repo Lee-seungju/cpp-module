@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/10 04:27:15 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 13:18:17 by slee2            ###   ########.fr       */
+/*   Created: 2021/10/13 07:57:38 by slee2             #+#    #+#             */
+/*   Updated: 2021/10/13 08:12:38 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DIAMONDTRAP_HPP
-# define DIAMONDTRAP_HPP
+#include "Dog.hpp"
 
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+Dog::Dog(): Animal() {
+	Animal::type = "Dog";
+	std::cout << "A new animal has been created. : " << this->type << std::endl;
+}
 
-class DiamondTrap: public FragTrap, public ScavTrap {
-	private:
-		std::string Name;
-	public:
-		DiamondTrap();
-		DiamondTrap( std::string n);
-		~DiamondTrap();
-		void	attack(std::string const & target);
-		DiamondTrap&	operator=( DiamondTrap const& Diamond);
-		void	whoAmI();
-};
+Dog::~Dog() {
+	std::cout << "The " << this->type << " is extinct." << std::endl;
+}
 
-#endif
+void Dog::makeSound(void) const {
+	std::cout << this->type << " makes Sound - Dog" << std::endl;
+}

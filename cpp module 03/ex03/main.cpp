@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 06:07:21 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 06:22:19 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/10 13:11:04 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 int	main(void) {
 	DiamondTrap	a("slee2");
-
 	a.whoAmI();
 	
 	DiamondTrap b("B");
 	DiamondTrap c("C");
-
 
 	std::cout << std::endl;
 	
