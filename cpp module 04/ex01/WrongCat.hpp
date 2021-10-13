@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 10:45:17 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 10:46:37 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/14 00:03:42 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class WrongCat: public WrongAnimal {
 		void makeSound(void) const;
 		WrongCat();
 		~WrongCat();
+		WrongCat(WrongCat const &wrongcat);
+		WrongCat& operator=(WrongCat const &d);
 };
 
 #endif

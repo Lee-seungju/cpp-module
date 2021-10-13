@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 07:33:08 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 11:49:04 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/13 15:30:19 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Animal {
 		virtual ~Animal();
 		virtual void makeSound(void) const;
 		std::string getType(void) const;
+		Animal& operator=(Animal const &c);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 08:02:51 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 13:10:12 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/13 23:36:03 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,16 @@
 
 class Cat: public Animal {
 	private:
-		
-	public:
 		Brain *b;
+	public:
 		void makeSound(void) const;
 		Cat();
-		// Cat(Brain const *brain);
+		Cat(Cat const &cat);
+		Cat(Brain const &brain);
+		Cat&  operator=(Cat const &c);
 		~Cat();
 		void setter(std::string mes, int len);
+		std::string getter(void);
 };
 
 #endif

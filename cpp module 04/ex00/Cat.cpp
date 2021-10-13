@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 08:03:54 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 08:08:05 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/13 23:46:45 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,19 @@ Cat::Cat(): Animal() {
 }
 
 Cat::~Cat() {
-	std::cout << "The " << this->type << " is extinct." << std::endl;
+	std::cout << "The cat is extinct." << std::endl;
+}
+
+Cat::Cat(Cat const &cat) {
+	*this = cat;
+	std::cout << "Copy constructor called - cat" << std::endl;
 }
 
 void Cat::makeSound(void) const {
 	std::cout << this->type << " makes Sound - Cat" << std::endl;
+}
+
+Cat& Cat::operator=(Cat const &c) {
+	this->type = c.type;
+	return *this;
 }

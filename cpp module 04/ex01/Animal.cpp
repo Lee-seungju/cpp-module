@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 07:44:49 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 12:33:23 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/13 23:31:06 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Animal::Animal() {
 }
 
 Animal::~Animal() {
-	std::cout << "The " << this->type << " is extinct." << std::endl;
+	std::cout << "The Animal is extinct." << std::endl;
 }
 
 std::string Animal::getType(void) const {
@@ -27,4 +27,9 @@ std::string Animal::getType(void) const {
 
 void Animal::makeSound(void) const {
 	std::cout << this->type << " makes Sound - Animal" << std::endl;
+}
+
+Animal& Animal::operator=(Animal const &c) {
+	this->type = c.type;
+	return *this;
 }

@@ -6,19 +6,29 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 08:03:54 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 13:10:10 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/13 23:54:05 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(): Animal() {
+Cat::Cat(): Animal(), b(new Brain()) {
 	Animal::type = "Cat";
 	std::cout << "A new animal has been created. : " << this->type << std::endl;
 }
 
 Cat::~Cat() {
-	std::cout << "The " << this->type << " is extinct." << std::endl;
+	std::cout << "The cat is extinct." << std::endl;
+	delete this->b;
+}
+
+Cat::Cat(Brain const &brain) {
+	*this->b = brain;
+}
+
+Cat::Cat(Cat const &cat) {
+	*this = cat;
+	std::cout << "Copy constructor called - cat" << std::endl;
 }
 
 void Cat::makeSound(void) const {
@@ -26,5 +36,16 @@ void Cat::makeSound(void) const {
 }
 
 void Cat::setter(std::string mes, int len) {
+	b = new Brain();
 	this->b->setter(mes, len);
+}
+
+Cat& Cat::operator=(Cat const &c) {
+	this->b = c.b;
+	this->type = c.type;
+	return *this;
+}
+
+std::string Cat::getter(void) {
+	return this->b->getter();
 }

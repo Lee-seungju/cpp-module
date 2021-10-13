@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 07:56:14 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 08:12:42 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/13 23:49:57 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class Dog: public Animal {
 		void makeSound(void) const ;
 		Dog();
 		~Dog();
+		Dog(Dog const &dog);
+		Dog& operator=(Dog const &d);
 };
 
 #endif

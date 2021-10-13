@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 10:44:05 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 10:45:04 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/13 23:59:54 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,12 @@ WrongAnimal::WrongAnimal() {
 }
 
 WrongAnimal::~WrongAnimal() {
-	std::cout << "The " << this->type << " is extinct." << std::endl;
+	std::cout << "The wronganimal is extinct." << std::endl;
+}
+
+WrongAnimal::WrongAnimal(WrongAnimal const &wronganimal) {
+	*this = wronganimal;
+	std::cout << "Copy constructor called - wronganimal" << std::endl;
 }
 
 std::string WrongAnimal::getType(void) const {
@@ -27,4 +32,9 @@ std::string WrongAnimal::getType(void) const {
 
 void WrongAnimal::makeSound(void) const {
 	std::cout << this->type << " makes Sound - WrongAnimal" << std::endl;
+}
+
+WrongAnimal& WrongAnimal::operator=(WrongAnimal const &d) {
+	this->type = d.type;
+	return *this;
 }
