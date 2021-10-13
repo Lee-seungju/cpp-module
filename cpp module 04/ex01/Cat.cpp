@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 07:44:49 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 11:49:08 by slee2            ###   ########.fr       */
+/*   Created: 2021/10/13 08:03:54 by slee2             #+#    #+#             */
+/*   Updated: 2021/10/13 13:10:10 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Cat.hpp"
 
-Animal::Animal() {
-	this->type = "default";
+Cat::Cat(): Animal() {
+	Animal::type = "Cat";
 	std::cout << "A new animal has been created. : " << this->type << std::endl;
 }
 
-Animal::~Animal() {
+Cat::~Cat() {
 	std::cout << "The " << this->type << " is extinct." << std::endl;
 }
 
-std::string Animal::getType(void) const {
-	return this->type;
+void Cat::makeSound(void) const {
+	std::cout << this->type << " makes Sound - Cat" << std::endl;
 }
 
-void Animal::makeSound(void) const {
-	std::cout << this->type << " makes Sound - Animal" << std::endl;
+void Cat::setter(std::string mes, int len) {
+	this->b->setter(mes, len);
 }

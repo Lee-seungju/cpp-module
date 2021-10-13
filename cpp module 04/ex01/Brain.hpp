@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 07:33:08 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 11:49:04 by slee2            ###   ########.fr       */
+/*   Created: 2021/10/13 10:54:58 by slee2             #+#    #+#             */
+/*   Updated: 2021/10/13 13:10:13 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 #include <iostream>
+#include <string>
 
-class Animal {
-	protected:
-		std::string	type;
+class Brain {
+	private:
+		std::string	*ideas;
 	public:
-		Animal();
-		virtual ~Animal();
-		virtual void makeSound(void) const;
-		std::string getType(void) const;
+		Brain();
+		~Brain();
+		Brain(Brain const &b);
+		void setter(std::string mes, int len);
 };
 
 #endif

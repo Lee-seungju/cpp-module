@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 07:33:08 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 11:49:04 by slee2            ###   ########.fr       */
+/*   Created: 2021/10/13 10:43:21 by slee2             #+#    #+#             */
+/*   Updated: 2021/10/13 10:43:53 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 #include <iostream>
 
-class Animal {
+class WrongAnimal {
 	protected:
 		std::string	type;
 	public:
-		Animal();
-		virtual ~Animal();
-		virtual void makeSound(void) const;
+		WrongAnimal();
+		~WrongAnimal();
+		void makeSound(void) const;
 		std::string getType(void) const;
 };
 

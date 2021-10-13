@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 07:44:49 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 11:49:08 by slee2            ###   ########.fr       */
+/*   Created: 2021/10/13 10:44:05 by slee2             #+#    #+#             */
+/*   Updated: 2021/10/13 10:45:04 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-Animal::Animal() {
+WrongAnimal::WrongAnimal() {
 	this->type = "default";
-	std::cout << "A new animal has been created. : " << this->type << std::endl;
+	std::cout << "A new wronganimal has been created. : " << this->type << std::endl;
 }
 
-Animal::~Animal() {
+WrongAnimal::~WrongAnimal() {
 	std::cout << "The " << this->type << " is extinct." << std::endl;
 }
 
-std::string Animal::getType(void) const {
+std::string WrongAnimal::getType(void) const {
 	return this->type;
 }
 
-void Animal::makeSound(void) const {
-	std::cout << this->type << " makes Sound - Animal" << std::endl;
+void WrongAnimal::makeSound(void) const {
+	std::cout << this->type << " makes Sound - WrongAnimal" << std::endl;
 }

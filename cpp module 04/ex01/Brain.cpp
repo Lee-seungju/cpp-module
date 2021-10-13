@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 07:44:49 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 11:49:08 by slee2            ###   ########.fr       */
+/*   Created: 2021/10/13 11:29:15 by slee2             #+#    #+#             */
+/*   Updated: 2021/10/13 13:10:12 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Brain.hpp"
 
-Animal::Animal() {
-	this->type = "default";
-	std::cout << "A new animal has been created. : " << this->type << std::endl;
+Brain::Brain() {
+	this->ideas = new std::string[100];
 }
 
-Animal::~Animal() {
-	std::cout << "The " << this->type << " is extinct." << std::endl;
+Brain::~Brain() {
+	std::cout << "Brain is gone" << std::endl;
 }
 
-std::string Animal::getType(void) const {
-	return this->type;
+Brain::Brain(Brain const &b) {
+	*this = b;
+	std::cout << "Copy constructor called" << std::endl;
 }
 
-void Animal::makeSound(void) const {
-	std::cout << this->type << " makes Sound - Animal" << std::endl;
+void Brain::setter(std::string mes, int len) {
+	for(int i=0; i<len; i++) {
+		this->ideas[i] = mes;
+	}
 }

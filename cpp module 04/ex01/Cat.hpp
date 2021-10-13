@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 07:44:49 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 11:49:08 by slee2            ###   ########.fr       */
+/*   Created: 2021/10/13 08:02:51 by slee2             #+#    #+#             */
+/*   Updated: 2021/10/13 13:10:12 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CAT_HPP
+# define CAT_HPP
+
 #include "Animal.hpp"
+#include "Brain.hpp"
 
-Animal::Animal() {
-	this->type = "default";
-	std::cout << "A new animal has been created. : " << this->type << std::endl;
-}
+class Cat: public Animal {
+	private:
+		
+	public:
+		Brain *b;
+		void makeSound(void) const;
+		Cat();
+		// Cat(Brain const *brain);
+		~Cat();
+		void setter(std::string mes, int len);
+};
 
-Animal::~Animal() {
-	std::cout << "The " << this->type << " is extinct." << std::endl;
-}
-
-std::string Animal::getType(void) const {
-	return this->type;
-}
-
-void Animal::makeSound(void) const {
-	std::cout << this->type << " makes Sound - Animal" << std::endl;
-}
+#endif
