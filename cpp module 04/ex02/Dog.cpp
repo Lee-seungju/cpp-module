@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 08:03:54 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/18 01:28:31 by slee2            ###   ########.fr       */
+/*   Created: 2021/10/13 07:57:38 by slee2             #+#    #+#             */
+/*   Updated: 2021/10/18 01:29:02 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Dog.hpp"
 
-Cat::Cat(): Animal(), b(new Brain()) {
-	Animal::type = "Cat";
+Dog::Dog(): Animal(), b(new Brain()) {
+	Animal::type = "Dog";
 	std::cout << "A new animal has been created. : " << this->type << std::endl;
 }
 
-Cat::~Cat() {
-	std::cout << "The cat is extinct." << std::endl;
-	delete this->b;
-}
-
-Cat::Cat(Brain const &brain) {
+Dog::Dog(const Brain &brain) {
 	if (this->b) {
 		delete this->b;
 		this->b = NULL;
@@ -30,26 +25,33 @@ Cat::Cat(Brain const &brain) {
 	*this->b = brain;
 }
 
-Cat::Cat(Cat const &cat) {
-	*this = cat;
-	std::cout << "Copy constructor called - cat" << std::endl;
+Dog::Dog(Dog const &dog) {
+	*this = dog;
+	std::cout << "Copy constructor called - dog" << std::endl;
 }
 
-void Cat::makeSound(void) const {
-	std::cout << this->type << " makes Sound - Cat" << std::endl;
+
+Dog::~Dog() {
+	std::cout << "The dog is extinct." << std::endl;
+	delete this->b;
 }
 
-void Cat::setter(std::string mes, int len) {
+void Dog::makeSound(void) const {
+	std::cout << this->type << " makes Sound - Dog" << std::endl;
+}
+
+Dog& Dog::operator=(Dog const &d) {
+	this->b = d.b;
+	this->type = d.type;
+	return *this;
+}
+
+
+void Dog::setter(std::string mes, int len) {
 	b = new Brain();
 	this->b->setter(mes, len);
 }
 
-Cat& Cat::operator=(Cat const &c) {
-	this->b = c.b;
-	this->type = c.type;
-	return *this;
-}
-
-std::string Cat::getter(void) {
+std::string Dog::getter(void) {
 	return this->b->getter();
 }
