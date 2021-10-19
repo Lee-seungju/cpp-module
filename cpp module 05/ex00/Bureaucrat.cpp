@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:16:57 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/19 23:47:42 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:58:51 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,27 @@ Bureaucrat::Bureaucrat(): name("default"), grade(0) {
 
 Bureaucrat::Bureaucrat(char* _name, int _grade): name(_name), grade(_grade) {
 	if (_grade > 150)
-		throw(GradeTooHighException());
-	else if (_grade < 1)
 		throw(GradeTooLowException());
+	else if (_grade < 1)
+		throw(GradeTooHighException());
 	std::cout << "Make Bureaucrat class" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const& a): name(a.getName()), grade(a.getGrade()) {
 	if (grade > 150)
-		throw(GradeTooHighException());
-	else if (grade < 1)
 		throw(GradeTooLowException());
+	else if (grade < 1)
+		throw(GradeTooHighException());
 	std::cout << "Copy Bureaucrat class" << std::endl;
 }
 
 Bureaucrat& Bureaucrat::operator=(Bureaucrat const &c) {
 	this->grade = c.getGrade();
 	this->name = c.getName();
+	if (grade > 150)
+		throw(GradeTooLowException());
+	else if (grade < 1)
+		throw(GradeTooHighException());
 	std::cout << "operator= with Bureaucrat class" << std::endl;
 	return *this;
 }
@@ -53,14 +57,14 @@ int				Bureaucrat::getGrade() const {
 
 void			Bureaucrat::increment() {
 	if (this->grade <= 1)
-		throw(GradeTooLowException());
+		throw(GradeTooHighException());
 	this->grade--;
 	std::cout << "Increment " << this->name << " grade -> " << this->grade << std::endl;
 }
 
 void			Bureaucrat::decrement() {
 	if (this->grade >= 150)
-		throw(GradeTooHighException());
+		throw(GradeTooLowException());
 	this->grade++;
 	std::cout << "Decrement " << this->name << " grade -> " << this->grade << std::endl;
 
