@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:30:53 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/20 05:08:53 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/20 06:06:33 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "Form.hpp"
+#include "Intern.hpp"
 
 int main()
 {
@@ -23,10 +24,19 @@ int main()
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 
-	Form		*z1 = new ShrubberyCreationForm("shrubbery");
-	Form		*z2 = new RobotomyRequestForm("Robot");
-	Form		*z3 = new PresidentialPardonForm("President");
+	Form		*z1;
+	Form		*z2;
+	Form		*z3;
+	Intern		in;
 
+	std::cout << std::endl;
+	
+	z1 = in.makeForm("presidential pardon", "pardon");
+	z2 = in.makeForm("robotmy request", "robot");
+	z3 = in.makeForm("Shrubbery creation", "shrubbery");
+	
+	std::cout << std::endl;
+	
 	std::cout << *z1 << std::endl;
 	std::cout << *z2 << std::endl;
 	std::cout << *z3 << std::endl;
@@ -55,6 +65,13 @@ int main()
 	a.executeForm(*z3);
 	
 	std::cout << std::endl;
-	
+
+	z1 = in.makeForm("aa", "aa");
+
+	std::cout << std::endl;
+	delete z1;
+	delete z2;
+	delete z3;
+
 	return 0;
 }
