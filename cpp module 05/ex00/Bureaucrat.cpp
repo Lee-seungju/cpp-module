@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:16:57 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/20 00:00:02 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/20 00:27:40 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Bureaucrat::Bureaucrat(): name("default"), grade(0) {
 	std::cout << "Make Bureaucrat class" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(char* _name, int _grade): name(_name), grade(_grade) {
+Bureaucrat::Bureaucrat(std::string _name, int _grade): name(_name), grade(_grade) {
 	if (_grade > 150)
 		throw(GradeTooLowException());
 	else if (_grade < 1)
@@ -42,7 +42,7 @@ Bureaucrat::Bureaucrat(Bureaucrat const& a): name(a.getName()), grade(a.getGrade
 
 Bureaucrat& Bureaucrat::operator=(Bureaucrat const &c) {
 	this->grade = c.getGrade();
-	this->name = c.getName();
+	*(const_cast<std::string*>(&this->name)) = c.getName();
 	if (grade > 150)
 		throw(GradeTooLowException());
 	else if (grade < 1)
@@ -55,22 +55,22 @@ Bureaucrat::~Bureaucrat() {
 	std::cout << "Remove Bureaucrat class" << std::endl;
 }
 
-const	char*	Bureaucrat::getName() const {
+const	std::string&	Bureaucrat::getName() const {
 	return this->name;
 }
 
-int				Bureaucrat::getGrade() const {
+int						Bureaucrat::getGrade() const {
 	return this->grade;
 }
 
-void			Bureaucrat::increment() {
+void					Bureaucrat::increment() {
 	if (this->grade <= 1)
 		throw(GradeTooHighException());
 	this->grade--;
 	std::cout << "Increment " << this->name << " grade -> " << this->grade << std::endl;
 }
 
-void			Bureaucrat::decrement() {
+void					Bureaucrat::decrement() {
 	if (this->grade >= 150)
 		throw(GradeTooLowException());
 	this->grade++;
