@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 22:55:17 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/20 00:25:46 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/20 04:35:17 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,24 @@ class Form {
 			public:
 				const char* what(void) const throw();
 		};
+		class FileError: public std::exception {
+			public:
+				const char* what(void) const throw();
+		};
+		
 		Form();
 		Form(std::string _name, int _grade, int _sign_grade);
 		Form(Form const& a);
 		Form& operator=(Form const &c);
-		~Form();
+		virtual ~Form();
 
 		void				beSigned(const Bureaucrat& bur);
 
 		const	std::string&		getName() const;
 		const	int&				getGrade() const;
 		const	int&				getSignGrade() const;
-		bool					getSign() const;
+		bool						getSign() const;
+		virtual	void	execute(Bureaucrat const & executor) const = 0;
 };
 
 std::ostream&   operator<<(std::ostream &out, const Form &b);

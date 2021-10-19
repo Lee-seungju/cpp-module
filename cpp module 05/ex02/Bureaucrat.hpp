@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:16:26 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/20 00:26:11 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/20 03:02:39 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ class Bureaucrat {
 		int						getGrade() const;
 		void					increment();
 		void					decrement();
+
+		void	executeForm(Form const & form);
 };
 
 std::ostream&   operator<<(std::ostream &out, const Bureaucrat &b);

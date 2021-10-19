@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:16:57 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/20 01:14:54 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/20 03:04:49 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,13 @@ void					Bureaucrat::decrement() {
 std::ostream&   operator<<(std::ostream &out, const Bureaucrat &b) {
     out << b.getName() << ", bureaucrat grade " << b.getGrade() << ".";
     return out;
+}
+
+void	Bureaucrat::executeForm(Form const &form) {
+	try {
+		form.execute(*this);
+		std::cout << this->getName() << " executes " << form.getName() << std::endl;
+	} catch(std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
 }

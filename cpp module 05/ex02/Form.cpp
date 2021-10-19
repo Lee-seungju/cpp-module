@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 23:01:52 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/20 00:29:42 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/20 04:35:19 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ const char* Form::GradeTooHighException::what(void) const throw() {
 
 const char* Form::GradeTooLowException::what(void) const throw() {
 	return ("GradeTooLowException");
+}
+
+const char* Form::FileError::what(void) const throw() {
+	return ("FileError");
 }
 
 Form::Form(): name("default"), grade(0), sign_grade(0), sign(false) {
