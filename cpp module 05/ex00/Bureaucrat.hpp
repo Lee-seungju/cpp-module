@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:16:26 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/19 22:47:32 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:12:14 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class Bureaucrat {
 	private:
-		std::string		name;
+		const	char*	name;
 		int				grade;
 	
 	public:
@@ -36,11 +36,11 @@ class Bureaucrat {
 		};
 
 		Bureaucrat();
-		Bureaucrat(std::string _name, int _grade);
+		Bureaucrat(char* _name, int _grade);
 		Bureaucrat(Bureaucrat const& a);
 		Bureaucrat& operator=(Bureaucrat const &c);
 		~Bureaucrat();
-		std::string			getName() const;
+		const	char*		getName() const;
 		int					getGrade() const;
 		void				increment();
 		void				decrement();
