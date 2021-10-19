@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:16:57 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/19 23:12:26 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:28:01 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,11 @@ Bureaucrat::Bureaucrat(char* _name, int _grade): name(_name), grade(_grade) {
 	std::cout << "Make Bureaucrat class" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const& a) {
-	*this = a;
+Bureaucrat::Bureaucrat(Bureaucrat const& a): name(a.getName()), grade(a.getGrade()) {
+	if (grade > 150)
+		throw(GradeTooHighException());
+	else if (grade < 1)
+		throw(GradeTooLowException());
 	std::cout << "Copy Bureaucrat class" << std::endl;
 }
 
