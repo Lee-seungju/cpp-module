@@ -6,13 +6,13 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:16:57 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/19 23:28:01 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:47:42 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(): name("default"), grade(1) {
+Bureaucrat::Bureaucrat(): name("default"), grade(0) {
 	std::cout << "Make Bureaucrat class" << std::endl;
 }
 
