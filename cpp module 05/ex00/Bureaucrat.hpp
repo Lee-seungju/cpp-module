@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:16:26 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/19 23:12:14 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/20 00:00:11 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,11 @@ class Bureaucrat {
 	public:
 		class GradeTooHighException: public std::exception {
 			public:
-				const char* what(void) const throw() {
-					return ("GradeTooHighException");
-				}
+				const char* what(void) const throw();
 		};
 		class GradeTooLowException: public std::exception {
 			public:
-				const char* what(void) const throw() {
-					return ("GradeTooLowException");
-				}
+				const char* what(void) const throw();
 		};
 
 		Bureaucrat();

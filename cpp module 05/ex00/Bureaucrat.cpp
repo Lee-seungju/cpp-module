@@ -6,11 +6,19 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:16:57 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/19 23:58:51 by slee2            ###   ########.fr       */
+/*   Updated: 2021/10/20 00:00:02 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+const char* Bureaucrat::GradeTooHighException::what(void) const throw() {
+	return ("GradeTooHighException");
+}
+
+const char* Bureaucrat::GradeTooLowException::what(void) const throw() {
+	return ("GradeTooLowException");
+}
 
 Bureaucrat::Bureaucrat(): name("default"), grade(0) {
 	std::cout << "Make Bureaucrat class" << std::endl;
