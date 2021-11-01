@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 05:45:06 by slee2             #+#    #+#             */
-/*   Updated: 2021/11/01 22:42:39 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/01 22:47:07 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,5 @@ ClapTrap&	ClapTrap::operator=( ClapTrap const& clap) {
 }
 
 ClapTrap::ClapTrap( const ClapTrap& clap) {
-		*this = clap;
+	*this = clap;
 }

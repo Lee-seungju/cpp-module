@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 04:03:09 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 04:22:42 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/01 22:46:25 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class FragTrap : public ClapTrap {
 		FragTrap( std::string name);
 		~FragTrap();
 		FragTrap&	operator=( FragTrap const& frag);
+		FragTrap( const FragTrap& frag);
 		void	highFivesGuys(void);
 };
 
