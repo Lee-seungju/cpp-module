@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 04:03:31 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 06:20:43 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/01 22:48:41 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,8 @@ void	FragTrap::highFivesGuys(void) {
 	else
 		std::cout << "FragTrap " << this->Name << " can't ask for a positive high-five because " << this->Name << " is dead" << std::endl;
 
+}
+
+FragTrap::FragTrap( const FragTrap& frag) {
+	*this = frag;
 }

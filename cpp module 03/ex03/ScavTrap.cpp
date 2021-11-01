@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 02:28:36 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 05:42:46 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/01 22:50:00 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,8 @@ void	ScavTrap::guardGate() {
 		std::cout << "ScavTrap " << this->Name << " has entered gate guard mode." << std::endl;
 	else
 		std::cout << "ScavTrap " << this->Name << " cannot enter gate guard mode because " << this->Name << " is dead." << std::endl;
+}
+
+ScavTrap::ScavTrap( const ScavTrap& scav) {
+	*this = scav;
 }

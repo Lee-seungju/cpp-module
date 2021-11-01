@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 04:27:06 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 13:49:56 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/01 22:50:45 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,8 @@ DiamondTrap&	DiamondTrap::operator=( DiamondTrap const& Diamond) {
 
 void	DiamondTrap::whoAmI() {
 	std::cout << "DiamondTrap name is " << this->Name << " and ClapTrap name is " << ClapTrap::Name << std::endl;
+}
+
+DiamondTrap::DiamondTrap( const DiamondTrap& dia) {
+	*this = dia;
 }

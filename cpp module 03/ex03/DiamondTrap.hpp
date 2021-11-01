@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 04:27:15 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 13:18:17 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/01 22:50:20 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class DiamondTrap: public FragTrap, public ScavTrap {
 		~DiamondTrap();
 		void	attack(std::string const & target);
 		DiamondTrap&	operator=( DiamondTrap const& Diamond);
+		DiamondTrap( const DiamondTrap& dia);
 		void	whoAmI();
 };
 
