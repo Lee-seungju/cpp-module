@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 02:28:44 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 03:44:38 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/01 22:43:13 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class ScavTrap: public ClapTrap {
 		void	guardGate();
 
 		ScavTrap& operator=( ScavTrap const& scav);
+		ScavTrap( const ScavTrap& scav);
 };
 
 #endif
