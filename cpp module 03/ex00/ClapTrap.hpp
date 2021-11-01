@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 05:45:17 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/10 03:13:21 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/01 22:39:13 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class ClapTrap {
 		void	beRepaired(unsigned int amount);
 		ClapTrap&	operator=( ClapTrap const& clap);
 		ClapTrap(std::string name);
+		ClapTrap( const ClapTrap& clap);
 		ClapTrap();
 		~ClapTrap();
 };
