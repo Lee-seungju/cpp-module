@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 10:43:21 by slee2             #+#    #+#             */
-/*   Updated: 2021/11/04 06:53:23 by slee2            ###   ########.fr       */
+/*   Created: 2021/10/23 06:24:04 by slee2             #+#    #+#             */
+/*   Updated: 2021/10/23 06:29:27 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
-
 #include <iostream>
 
-class WrongAnimal {
-	protected:
-		std::string	type;
-	public:
-		WrongAnimal();
-		virtual ~WrongAnimal();
-		WrongAnimal(WrongAnimal const &wronganimal);
-		void makeSound(void) const;
-		std::string getType(void) const;
-		WrongAnimal& operator=(WrongAnimal const &d);
-};
+// uintptr_t	serialize(Data* ptr) {
 
-#endif
+// }
+
+// Data* deserialize(uintptr_t raw) {
+
+// }
+
+int main()
+{
+
+}

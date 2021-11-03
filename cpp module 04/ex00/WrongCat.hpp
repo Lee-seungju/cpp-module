@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 10:45:17 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/14 00:03:42 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/04 08:50:17 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 #include "WrongAnimal.hpp"
 
 class WrongCat: public WrongAnimal {
-		public:
-		void makeSound(void) const;
+	public:
 		WrongCat();
-		~WrongCat();
 		WrongCat(WrongCat const &wrongcat);
 		WrongCat& operator=(WrongCat const &d);
+		~WrongCat();
+		void makeSound(void) const;
 };
 
 #endif

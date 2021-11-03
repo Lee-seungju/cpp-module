@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 07:44:49 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 23:31:06 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/04 08:48:44 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,8 @@ void Animal::makeSound(void) const {
 Animal& Animal::operator=(Animal const &c) {
 	this->type = c.type;
 	return *this;
+}
+
+Animal::Animal( const Animal& a) {
+	*this = a;
 }

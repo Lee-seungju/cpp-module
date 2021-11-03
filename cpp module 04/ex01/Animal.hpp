@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 07:33:08 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 15:30:19 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/04 08:53:14 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,15 @@
 #include <iostream>
 
 class Animal {
-	protected:
-		std::string	type;
 	public:
 		Animal();
+		Animal( const Animal& a);
+		Animal& operator=(Animal const &c);
 		virtual ~Animal();
 		virtual void makeSound(void) const;
 		std::string getType(void) const;
-		Animal& operator=(Animal const &c);
+	protected:
+		std::string	type;
 };
 
 #endif
