@@ -6,14 +6,13 @@
 #    By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/28 07:55:44 by slee2             #+#    #+#              #
-#    Updated: 2021/11/04 06:31:59 by slee2            ###   ########.fr        #
+#    Updated: 2021/11/04 06:56:52 by slee2            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
 CXX = clang++
-#CXXFLAGS = -Wall -Wextra -Werror
-CXXFLAGS =
+CXXFLAGS = -Wall -Wextra -Werror
 SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS = $(SRCS:.cpp=.o)
 
