@@ -6,14 +6,14 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 07:44:49 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 23:31:06 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/04 06:22:49 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 Animal::Animal() {
-	this->type = "default";
+	this->type = "Animal";
 	std::cout << "A new animal has been created. : " << this->type << std::endl;
 }
 

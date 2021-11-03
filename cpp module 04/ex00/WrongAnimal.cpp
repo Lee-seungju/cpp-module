@@ -6,14 +6,14 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 10:44:05 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/13 23:59:54 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/04 06:23:38 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal() {
-	this->type = "default";
+	this->type = "WrongAnimal";
 	std::cout << "A new wronganimal has been created. : " << this->type << std::endl;
 }
 
