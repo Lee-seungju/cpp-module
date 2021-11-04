@@ -17,20 +17,21 @@
 #include "ICharacter.hpp"
 
 class Character: public ICharacter {
-	protected:
-		std::string _name;
-		AMateria* inven[4];
-		int		_count;
 	public:
 		Character();
 		Character(std::string name);
-		Character(Character const &_ch);
+		Character(const Character& _ch);
+		Character& operator=(Character const &c);
 		virtual ~Character();
 		
 		std::string const & getName() const;
 		void equip(AMateria* m);
 		void unequip(int idx);
 		void use(int idx, ICharacter& target);
+	protected:
+		std::string _name;
+		AMateria* inven[4];
+		int		_count;
 };
 
 #endif

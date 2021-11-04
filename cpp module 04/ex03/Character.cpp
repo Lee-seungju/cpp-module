@@ -36,7 +36,7 @@ Character::~Character() {
 	}
 }
 
-Character::Character(Character const &_ch) {
+Character::Character(const Character& _ch) {
 	*this = _ch;
 
 	for(int i=0; i<4; i++) {
@@ -74,4 +74,10 @@ void Character::use(int idx, ICharacter& target) {
 	if (this->inven[idx] == 0)
 		return ;
 	this->inven[idx]->use(target);
+}
+
+Character& Character::operator=(Character const &c) {
+	this->_name = c._name;
+	this->_count = c._count;
+	return *this;
 }

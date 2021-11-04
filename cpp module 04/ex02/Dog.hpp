@@ -17,17 +17,17 @@
 #include "Brain.hpp"
 
 class Dog: public Animal {
-	private:
-		Brain *b;
 	public:
-		void makeSound(void) const ;
 		Dog();
-		~Dog();
-		Dog(const Brain &brain);
 		Dog(Dog const &dog);
+		Dog(const Brain &brain);
 		Dog& operator=(Dog const &d);
+		~Dog();
+		void makeSound(void) const ;
 		void setter(std::string mes, int len);
 		std::string getter(void);
+	private:
+		Brain *b;
 };
 
 #endif

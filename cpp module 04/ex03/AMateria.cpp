@@ -38,3 +38,12 @@ void AMateria::use(ICharacter& target) {
 }
 
 AMateria::~AMateria() {}
+
+AMateria::AMateria( const AMateria& a) {
+	*this = a;
+}
+
+AMateria& AMateria::operator=(AMateria const &c) {
+	this->_type = c._type;
+	return *this;
+}

@@ -18,6 +18,8 @@
 class Ice: public AMateria {
 	public:
 		Ice();
+		Ice( const Ice& i);
+		Ice& operator=(Ice const &c);
 		virtual ~Ice();
 		AMateria* clone() const;
 		void use(ICharacter& target);

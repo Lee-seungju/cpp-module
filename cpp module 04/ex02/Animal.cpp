@@ -33,3 +33,7 @@ Animal& Animal::operator=(Animal const &c) {
 	this->type = c.type;
 	return *this;
 }
+
+Animal::Animal( const Animal& a) {
+	*this = a;
+}

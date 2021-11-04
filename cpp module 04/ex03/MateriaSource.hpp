@@ -16,14 +16,16 @@
 #include "IMateriaSource.hpp"
 
 class MateriaSource : public IMateriaSource {
-	protected:
-		AMateria* inven[4];
-		int	count;
 	public:
 		MateriaSource();
+		MateriaSource( const MateriaSource& m);
+		MateriaSource& operator=( MateriaSource const &c);
 		~MateriaSource();
 		void learnMateria(AMateria* a);
 		AMateria* createMateria(std::string const & type);
+	protected:
+		AMateria* inven[4];
+		int	count;
 };
 
 #endif
