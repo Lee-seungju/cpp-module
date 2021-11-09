@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 02:05:11 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/18 06:23:32 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/10 08:54:26 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,14 @@ int main()
 
 	me->equip(tmp);
 	me->use(2, *aaa);
+	me->use(4, *aaa);
+
+	me->equip(tmp);
+	me->equip(tmp);
+
+	src->learnMateria(new Ice);
+	src->learnMateria(new Ice);
+	src->learnMateria(new Ice);
 	
 	delete aaa;
 	delete bob;
