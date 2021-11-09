@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 07:57:38 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/18 01:29:02 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/10 07:54:20 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,6 @@ Dog::Dog(): Animal(), b(new Brain()) {
 }
 
 Dog::Dog(const Brain &brain) {
-	if (this->b) {
-		delete this->b;
-		this->b = NULL;
-	}
 	*this->b = brain;
 }
 

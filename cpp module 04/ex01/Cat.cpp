@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 08:03:54 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/18 01:28:31 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/10 07:53:49 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,6 @@ Cat::~Cat() {
 }
 
 Cat::Cat(Brain const &brain) {
-	if (this->b) {
-		delete this->b;
-		this->b = NULL;
-	}
 	*this->b = brain;
 }
 
