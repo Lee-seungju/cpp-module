@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 02:52:12 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/20 05:11:07 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/22 23:32:09 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
 void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
+	(*const_cast<Bureaucrat*>(&executor)).signForm(*(const_cast<ShrubberyCreationForm*>(this)));
+	if (this->getSign() == false)
+		throw(NoSignException());
 	if (executor.getGrade() > this->getGrade())
 		throw(GradeTooLowException());
 	std::string		file_name = this->getName() + "_shrubbery";

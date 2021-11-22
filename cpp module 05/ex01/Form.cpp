@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 23:01:52 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/20 00:29:42 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/22 22:30:54 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ Form::~Form() {
 	std::cout << "Remove Form class" << std::endl;
 }
 
-void				Form::beSigned(const Bureaucrat& bur) {
+void	Form::beSigned(const Bureaucrat& bur) {
 	if (bur.getGrade() <= this->sign_grade)
 		this->sign = true;
 	else

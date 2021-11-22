@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:16:57 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/20 00:26:19 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/22 22:35:32 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,18 +68,18 @@ const	std::string&	Bureaucrat::getName() const {
 	return this->name;
 }
 
-int						Bureaucrat::getGrade() const {
+int		Bureaucrat::getGrade() const {
 	return this->grade;
 }
 
-void					Bureaucrat::increment() {
+void	Bureaucrat::increment() {
 	if (this->grade <= 1)
 		throw(GradeTooHighException());
 	this->grade--;
 	std::cout << "Increment " << this->name << " grade -> " << this->grade << std::endl;
 }
 
-void					Bureaucrat::decrement() {
+void	Bureaucrat::decrement() {
 	if (this->grade >= 150)
 		throw(GradeTooLowException());
 	this->grade++;

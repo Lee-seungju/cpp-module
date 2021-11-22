@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 23:01:52 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/20 04:35:19 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/22 23:19:49 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ const char* Form::GradeTooLowException::what(void) const throw() {
 
 const char* Form::FileError::what(void) const throw() {
 	return ("FileError");
+}
+
+const char* Form::NoSignException::what(void) const throw() {
+	return ("NoSignException");
 }
 
 Form::Form(): name("default"), grade(0), sign_grade(0), sign(false) {
@@ -61,7 +65,7 @@ Form::~Form() {
 	std::cout << "Remove Form class" << std::endl;
 }
 
-void				Form::beSigned(const Bureaucrat& bur) {
+void	Form::beSigned(const Bureaucrat& bur) {
 	if (bur.getGrade() <= this->sign_grade)
 		this->sign = true;
 	else
@@ -72,15 +76,15 @@ const	std::string&	Form::getName() const {
 	return this->name;
 }
 
-const	int&			Form::getGrade() const {
+const	int&	Form::getGrade() const {
 	return this->grade;
 }
 
-const	int&			Form::getSignGrade() const {
+const	int&	Form::getSignGrade() const {
 	return this->sign_grade;
 }
 
-bool					Form::getSign() const {
+bool	Form::getSign() const {
 	return this->sign;
 }
 

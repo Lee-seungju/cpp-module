@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 22:55:17 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/20 04:35:17 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/22 23:44:51 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,10 @@ class Form {
 				const char* what(void) const throw();
 		};
 		class FileError: public std::exception {
+			public:
+				const char* what(void) const throw();
+		};
+		class NoSignException: public std::exception {
 			public:
 				const char* what(void) const throw();
 		};

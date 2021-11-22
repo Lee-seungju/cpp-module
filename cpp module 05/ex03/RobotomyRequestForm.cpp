@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 02:53:00 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/20 04:53:03 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/22 23:45:09 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(RobotomyRequestForm const &c
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
 void	RobotomyRequestForm::execute(Bureaucrat const & executor) const {
+	(*const_cast<Bureaucrat*>(&executor)).signForm(*(const_cast<RobotomyRequestForm*>(this)));
+	if (this->getSign() == false)
+		throw(NoSignException());
 	if (executor.getGrade() > this->getGrade())
 		throw(GradeTooLowException());
 	int num;

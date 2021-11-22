@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:30:53 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/20 06:06:33 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/22 23:49:10 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,26 +42,20 @@ int main()
 	std::cout << *z3 << std::endl;
 	std::cout << std::endl;
 	
-	b.signForm(*z1);
 	b.executeForm(*z1);
 
 	std::cout << std::endl;
 
-	b.signForm(*z2);
 	b.executeForm(*z2);
 
 	std::cout << std::endl;
 
-	b.signForm(*z3);
 	b.executeForm(*z3);
 
 	std::cout << std::endl;
 
-	a.signForm(*z1);
 	a.executeForm(*z1);
-	a.signForm(*z2);
 	a.executeForm(*z2);
-	a.signForm(*z3);
 	a.executeForm(*z3);
 	
 	std::cout << std::endl;
