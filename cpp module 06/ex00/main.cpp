@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:30:53 by slee2             #+#    #+#             */
-/*   Updated: 2021/10/23 05:27:17 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/23 15:51:56 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ bool	check_num(char *str, bool *point_zero) {
 	int len;
 
 	len = strlen(str);
-	if (str[0] == '-')
+	if (str[0] == '-' || str[0] == '+')
 		i++;
 	while(i < len) {
 		if (str[i] == '.' && include_point == false) {
