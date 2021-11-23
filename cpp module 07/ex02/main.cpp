@@ -6,7 +6,7 @@
 /*   By: slee2 <slee2@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:30:53 by slee2             #+#    #+#             */
-/*   Updated: 2021/11/23 22:56:05 by slee2            ###   ########.fr       */
+/*   Updated: 2021/11/23 22:57:24 by slee2            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Array.hpp"
 
 #define MAX_VAL 750
-int main(int, char**)
+int main()
 {
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
